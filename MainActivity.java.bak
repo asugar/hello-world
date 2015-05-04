@@ -20,7 +20,17 @@ import android.view.View.OnClickListener;
 			case 2:// 离线语音合成示例
 				intent = new Intent(this, TTSOfflineActivity.class);
 				break;
-			ca
+			case 3:// 语音唤醒示例
+				intent = new Intent(this, WakeupOfflineActivity.class);
+				break;
+			default:
+				break;
+		}
+		if (intent != null) {
+			startActivity(intent);
+		}
+	}
+
 	private String[] functions = { "在线识别", "本地识别", "本地合成", "本地唤醒" };
 
 	private class FunctionsAdapter extends BaseAdapter {
